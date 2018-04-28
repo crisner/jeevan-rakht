@@ -63,160 +63,6 @@ body {
   box-shadow: 0 0 20px 2px rgba(255, 205, 205, 0.65);
 }
 
-/* MAIN */
-
-.wrapper a.back {
-  position: relative;
-  left: 2%;
-  top: 1.3em;
-  bottom: 0;
-  padding: 0;
-  color: var(--text-color-dark);
-  z-index: 1;
-}
-
-.wrapper i.fas.fa-arrow-left {
-  font-size: 1.6em;
-}
-
-.wrapper h1 {
-  display: inline-block;
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: 2em;
-  width: 100%;
-}
-
-.wrapper h1 span {
-  font-family: var(--font-body);
-  font-weight: 300;
-}
-
-/* Form elements */
-.wrapper form {
-  position: relative;
-  top: 45%;
-  transform: translate(0, -45%);
-  padding: 2em 6em;
-  color: var(--text-color-light) !important;
-}
-
-.wrapper form .form-control {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-style: italic;
-  height: 3.2em;
-  border: 1px solid var(--lighter-grey);
-  box-shadow: 0 1px 0.02px var(--lighter-grey);
-}
-
-.wrapper form .form-control::placeholder {
-  color: gray;
-}
-
-.wrapper form .form-control:hover::placeholder {
-  color: var(--text-color-dark);
-}
-
-.wrapper form .form-control:hover {
-  color: var(--text-color-dark);
-  font-style: normal;
-  border: 2px solid var(--secondary-color);
-}
-
-.wrapper form .form-control:focus {
-  border: 2px solid var(--secondary-color);
-  box-shadow: 0 0 1.4px 2px rgba(248, 228, 140, 0.9);
-}
-
-.wrapper form label {
-  width: 100%;
-}
-
-.wrapper form .select-icon {
-  position: relative;
-}
-
-.wrapper select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.wrapper select#blood-group.form-control,
-.wrapper select#radius.form-control {
-  color: gray;
-  height: 3.2em;
-}
-
-.wrapper select#blood-group.form-control:hover,
-.wrapper select#radius.form-control:hover {
-  color: var(--text-color-dark);
-}
-
-/* Button */
-.wrapper button.btn.btn-primary {
-  background-color: var(--primary-color-light);
-  height: 3em;
-  font-family: var(--font-title);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border-radius: 0.68em;
-  border: 1px solid var(--primary-color-light);
-  margin-top: 2em;
-}
-
-.wrapper button.btn.btn-primary:hover {
-  background-color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
-}
-
-/* Fontawesome icons */
-.wrapper form .fas,
-.wrapper form .far {
-  color: var(--text-color-dark);
-  position: absolute;
-  top: 30%;
-  bottom: 0;
-}
-
-.wrapper form .fas.fa-map-marker-alt {
-  left: 96%;
-}
-
-.wrapper form .far.fa-compass {
-  left: 90%;
-  pointer-events: none;
-}
-
-.wrapper form .fas.fa-syringe {
-  left: 79.8%;
-  pointer-events: none;
-}
-
-.wrapper form .far.fa-calendar-alt {
-  left: 90%;
-}
-
-/* Bootstrap datepicker */
-.datepicker {
-  padding: 12px;
-}
-
-.datepicker table tr td.active.active {
-  color: var(--text-color-dark);
-  background: var(--secondary-color);
-}
-
-.datepicker table tr td.day:hover {
-  color: var(--text-color-dark);
-  border: 1px solid var(--secondary-color);
-  background: transparent;
-}
-
-
-/* MEDIA QUERIES */
 @media screen and (max-width: 34em) {
   li {
     text-align: left !important;
@@ -368,18 +214,166 @@ canvas {
   }
 }
 
-/*Locate blood starts here*/
-
+/* === Locate blood starts here === */
+/* MAIN */
 .wrapper {
   background-color: var(--white);
   border-radius: 7px;
-  padding: 8% 10%;
-  width: 98%;
+  padding: 0% 2%;
+  width: 100%;
   max-width: 910px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
+
+.wrapper a.back {
+  position: relative;
+  left: 2%;
+  top: 2.1em;
+  bottom: 0;
+  padding: 0;
+  color: var(--text-color-dark);
+  z-index: 1;
+}
+
+.wrapper i.fas.fa-arrow-left {
+  font-size: 1.6em;
+}
+
+.wrapper h1 {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 2em;
+  width: 100%;
+}
+
+.wrapper h1 span {
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+/* Form elements */
+.wrapper > form {
+  position: relative;
+  padding: 8% 10%;
+  color: var(--text-color-light) !important;
+}
+
+.wrapper form .form-control {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-style: italic;
+  height: 3.2em;
+  border: 1px solid var(--lighter-grey);
+  box-shadow: 0 1px 0.02px var(--lighter-grey);
+}
+
+.wrapper form .form-control::placeholder {
+  color: gray;
+}
+
+.wrapper form .form-control:hover::placeholder {
+  color: var(--text-color-dark);
+}
+
+.wrapper form .form-control:hover {
+  color: var(--text-color-dark);
+  font-style: normal;
+  border: 2px solid var(--secondary-color);
+  font-weight: 600;
+}
+
+.wrapper form .form-control:focus {
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 0 1.4px 2px rgba(248, 228, 140, 0.9);
+}
+
+.wrapper form label {
+  width: 100%;
+}
+
+.wrapper form .select-icon {
+  position: relative;
+}
+
+.wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.wrapper select#blood-group.form-control,
+.wrapper select#radius.form-control {
+  color: gray;
+  height: 3.2em;
+}
+
+.wrapper select#blood-group.form-control:hover,
+.wrapper select#radius.form-control:hover {
+  color: var(--text-color-dark);
+  font-weight: 600;
+}
+
+/* Button */
+.wrapper button.btn.btn-primary {
+  background-color: var(--primary-color-light);
+  height: 3em;
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0.68em;
+  border: 1px solid var(--primary-color-light);
+  margin-top: 1em;
+}
+
+.wrapper button.btn.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+/* Fontawesome icons */
+.wrapper form .fas,
+.wrapper form .far {
+  color: var(--text-color-dark);
+  position: absolute;
+  top: 25%;
+  left: 83%;
+  bottom: 0;
+  font-size: 1.2em;
+}
+
+.wrapper form .fas.fa-map-marker-alt {
+  left: 95%;
+}
+
+.wrapper form .far.fa-compass,
+.wrapper form .fas.fa-syringe {
+  /* left: 90%; */
+  pointer-events: none;
+}
+
+/* Bootstrap datepicker */
+.datepicker {
+  padding: 2.2%;
+}
+
+.datepicker table tr td {
+  padding: 1.8%;
+}
+
+.datepicker table tr td.active.active {
+  color: var(--text-color-dark);
+  background: var(--secondary-color);
+}
+
+.datepicker table tr td.day:hover {
+  color: var(--text-color-dark);
+  background: var(--lighter-grey);
+}
+
 
 /* .backArrow {
   display: inline-block;
@@ -409,7 +403,7 @@ canvas {
   padding-right: 10px;
   font-weight: 700;
 } */
-
+/* 
 .searchRadius {
   background-image: url(../icons_svg/compass.svg);
   background-repeat: no-repeat;
@@ -452,7 +446,7 @@ canvas {
   background-position-x: calc(100% - 16px);
   background-position-y: center;
   background-size: 19px;
-}
+} */
 
 /* .searchBlood {
   display: block;
@@ -472,13 +466,30 @@ canvas {
   cursor:  pointer;
 } */
 
+@media screen and (max-width:767px) {
+  .wrapper form .fas,
+  .wrapper form .far {
+    left: 85%;
+  }
+  .wrapper form .fas.fa-map-marker-alt {
+    left: 85%;
+  }
+}
+
 @media screen and (max-width:500px) {
-  .backArrow {
+  /* .backArrow {
     top: 26px;
     left: 15px;
-  }
+  } */
   .headingLocateBlood {
-    font-size: 24px;
+    font-size: 0.8em;
+  }
+  .wrapper form .fas,
+  .wrapper form .far {
+    left: 85%;
+  }
+  .wrapper form .fas.fa-map-marker-alt {
+    left: 85%;
   }
   .locateBlood {
     padding-top: 25px;

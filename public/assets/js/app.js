@@ -9,8 +9,12 @@ $(document).ready(function() {
         format: 'dd/mm/yyyy',
         container: contain,
         todayHighlight: true,
-        autoclose: false
+        autoclose: true
       };
 
       selectDate.datepicker(options);
+
+    selectDate.focus(function() {
+        $(this).attr('placeholder', 'dd/mm/yyyy')
+    });
 });
